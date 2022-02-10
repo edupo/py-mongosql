@@ -426,7 +426,7 @@ class DotColumnsBag(ColumnsBag):
         # JSON path
         if path:
             if self.is_column_json(column_name):
-                col = col[path].astext
+                col = col[path].as_string()
             else:
                 raise KeyError(name)
         return col
